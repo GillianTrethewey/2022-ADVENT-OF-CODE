@@ -5,6 +5,8 @@ const lines = fs
   .replace(/\r/g, "") // remove all \r characters to avoid issues on Windows
   .trim() // Remove starting/ending whitespace
   .split("\n"); // Split on newline
+// template credit to @thibpat on GitHub
+// sorting function courtesy of @thibpat
 
 function part1() {}
 const res = lines.map((line) => {
