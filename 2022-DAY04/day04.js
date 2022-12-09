@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const lines = fs
-  .readFileSync("day04.txt", { encoding: "utf-8" }) // read day??.txt content
+  .readFileSync("testday04.txt", { encoding: "utf-8" }) // read day??.txt content
   .replace(/\r/g, "") // remove all \r characters to avoid issues on Windows
   .trim() // Remove starting/ending whitespace
   .split("\n"); // Split on newline
@@ -42,8 +42,7 @@ function part2() {
     // interval A - B and C - D
     // B must be greater than C
     // D must be greater than A
-
-    return overlap ? 1 : 0;
+    return overlapOfAnyType ? 1 : 0;
   });
 
   console.log(res.reduce((a, b) => a + b, 0));
